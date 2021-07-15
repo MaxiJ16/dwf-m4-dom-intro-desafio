@@ -26,7 +26,7 @@ const cosasQueAprendimos = [
 ];
 
 function removiendoLi() {
-  const listasEl = document.querySelectorAll("ul li");
+  const listasEl = document.querySelectorAll(".lista li");
 
   listasEl.forEach(element => {
     element.remove()
@@ -34,12 +34,12 @@ function removiendoLi() {
 }
 
 function creandoLiNuevos() {
-  const ul = document.querySelector("ul");
+  const ul = document.querySelector(".lista");
 
   return cosasQueAprendimos.forEach(element => {
     const nuevasListas = document.createElement("li");
     ul.appendChild(nuevasListas);
-    
+
     nuevasListas.textContent = element.tema;
     nuevasListas.classList = element.class;
   })
